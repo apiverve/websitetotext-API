@@ -11,7 +11,7 @@
     "url": "git+https://github.com/apiverve/websitetotext-API.git"
   },
   "keywords": [
-    "website to text"," website to text api"," website to text tool"," website to text software"," website to text service"," website to text library"," website to text sdk"," website to text code"," website to text script"," website to text program"," website to text application"," website to text app"," website to text utility"," website to text helper"," website to text helper tool"," website to text helper software"," website to text helper service"," website to text helper library"," website to text helper sdk"," website to text helper code"," website to text helper script"," website to text helper program"," website to text helper application"," website to text helper app"," website to text helper tool"," website to text helper utility"," website to text helper"
+    "website to text","website to text api","website to text tool","website to text software","website to text service"
   ],
   "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
   "license": "MIT",
@@ -27,6 +27,6 @@
   "dependencies": {
     "node-fetch": "3.3.2",
     "promise": "^7.1.1",
-    "request": "^2.69.0"
+    "axios": "^0.15.3"
   }
 }
