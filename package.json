@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/websitetotext",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Website to Text is a simple tool for converting a website to text. It returns the text extracted from the website.",
   "main": "index.js",
   "scripts": {
