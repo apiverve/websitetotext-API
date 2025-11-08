@@ -1,24 +1,26 @@
 {
   "name": "@apiverve/websitetotext",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "description": "Website to Text is a simple tool for converting a website to text. It returns the text extracted from the website.",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "example": "node examples/basic.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/apiverve/websitetotext-API.git"
   },
   "keywords": [
-    "website to text","website to text api","website to text tool","website to text software","website to text service"
+    "website to text", "website to text api", "website to text tool", "website to text software", "website to text service"
   ],
   "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/apiverve/websitetotext-API/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/api/websitetotext?utm_source=npm",
+  "homepage": "https://apiverve.com/marketplace/websitetotext?utm_source=npm",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
@@ -27,6 +29,6 @@
   "dependencies": {
     "node-fetch": "^3.3.2",
     "promise": "^8.3.0",
-    "axios": "1.7.9"
+    "axios": "1.13.2"
   }
 }
