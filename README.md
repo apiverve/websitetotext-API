@@ -1,5 +1,4 @@
-Website to Text API
-============
+# Website to Text API
 
 Website to Text is a simple tool for converting a website to text. It returns the text extracted from the website.
 
@@ -7,54 +6,62 @@ Website to Text is a simple tool for converting a website to text. It returns th
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Javascript Wrapper for the [Website to Text API](https://apiverve.com/marketplace/api/websitetotext)
+This is a Javascript Wrapper for the [Website to Text API](https://apiverve.com/marketplace/websitetotext)
 
 ---
 
 ## Installation
-	npm install @apiverve/websitetotext --save
+
+Using npm:
+```shell
+npm install @apiverve/websitetotext
+```
+
+Using yarn:
+```shell
+yarn add @apiverve/websitetotext
+```
 
 ---
 
 ## Configuration
 
-Before using the websitetotext API client, you have to setup your account and obtain your API Key.  
+Before using the Website to Text API client, you have to setup your account and obtain your API Key.
 You can get it by signing up at [https://apiverve.com](https://apiverve.com)
 
 ---
 
-## Usage
+## Quick Start
 
-The Website to Text API documentation is found here: [https://docs.apiverve.com/api/websitetotext](https://docs.apiverve.com/api/websitetotext).  
+[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart)
+
+The Website to Text API documentation is found here: [https://docs.apiverve.com/ref/websitetotext](https://docs.apiverve.com/ref/websitetotext).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
-```
-var websitetotextAPI = require('@apiverve/websitetotext');
-var api = new websitetotextAPI({
-    api_key: [YOUR_API_KEY],
-    secure: true //(Optional, defaults to true)
+```javascript
+const websitetotextAPI = require('@apiverve/websitetotext');
+const api = new websitetotextAPI({
+    api_key: '[YOUR_API_KEY]'
 });
 ```
 
 ---
 
+## Usage
+
+---
 
 ### Perform Request
-Using the API client, you can perform requests to the API.
 
-###### Define Query
+Using the API is simple. All you have to do is make a request. The API will return a response with the data you requested.
 
-```
+```javascript
 var query = {
   "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts"
 };
-```
 
-###### Simple Request (using Callback)
-
-```
 api.execute(query, function (error, data) {
     if (error) {
         return console.error(error);
@@ -64,9 +71,52 @@ api.execute(query, function (error, data) {
 });
 ```
 
-###### Example Response
+---
 
+### Using Promises
+
+You can also use promises to make requests. The API returns a promise that you can use to handle the response.
+
+```javascript
+var query = {
+  "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts"
+};
+
+api.execute(query)
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error(error);
+    });
 ```
+
+---
+
+### Using Async/Await
+
+You can also use async/await to make requests. The API returns a promise that you can use to handle the response.
+
+```javascript
+async function makeRequest() {
+    var query = {
+  "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts"
+};
+
+    try {
+        const data = await api.execute(query);
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+}
+```
+
+---
+
+## Example Response
+
+```json
 {
   "status": "ok",
   "error": null,
@@ -79,8 +129,7 @@ api.execute(query, function (error, data) {
     "language": "en",
     "publisher": null,
     "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts"
-  },
-  "code": 200
+  }
 }
 ```
 
@@ -93,6 +142,7 @@ Need any assistance? [Get in touch with Customer Support](https://apiverve.com/c
 ---
 
 ## Updates
+
 Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Twitter.
 
 ---
